@@ -3,7 +3,7 @@
 const stats = [
   { value: "10+", label: "Years in Real Estate" },
   { value: "50+", label: "Properties Acquired" },
-  { value: "₦5B+", label: "Assets Under Management" },
+  { value: "£50M+", label: "Assets Under Management" },
   { value: "100%", label: "Client Retention Rate" },
 ];
 
@@ -128,7 +128,7 @@ export default function About() {
                 letterSpacing: "0.02em",
               }}
             >
-              Lagos · Nigeria
+              United Kingdom
             </p>
           </div>
 
@@ -147,7 +147,7 @@ export default function About() {
             >
               Shore Residence Limited is a full-service real estate firm focused
               on acquiring, developing, and managing premium properties across
-              Nigeria's most strategic locations.
+              the United Kingdom's most strategic locations.
             </p>
             <p
               style={{

@@ -37,14 +37,21 @@ export default function Hero() {
       */}
 
       {/* Placeholder bg — remove when you add the real media */}
-      <div
+      {/* <div
         style={{
           position: "absolute",
           inset: 0,
           zIndex: 0,
           background: "linear-gradient(135deg, #111 0%, #1a1a1a 50%, #0f0f0f 100%)",
         }}
-      />
+      /> */}
+              <video
+          autoPlay muted loop playsInline
+          style={{ position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover", zIndex:0 }}
+        >
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
+
 
       {/* Subtle gold grain texture overlay */}
       <div
