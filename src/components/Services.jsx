@@ -5,7 +5,8 @@ import { useState } from "react";
 const clusters = [
   {
     category: "Acquisition & Sourcing",
-    description: "We move early on the right assets — identifying and securing residential and commercial properties in locations with strong long-term fundamentals.",
+    description:
+      "We move early on the right assets — identifying and securing residential and commercial properties in locations with strong long-term fundamentals.",
     services: [
       {
         title: "Real Estate Investment",
@@ -19,7 +20,8 @@ const clusters = [
   },
   {
     category: "Development & Renovation",
-    description: "We don't just buy properties — we transform them. Every asset we touch is improved, enhanced, and positioned to perform.",
+    description:
+      "We don't just buy properties — we transform them. Every asset we touch is improved, enhanced, and positioned to perform.",
     services: [
       {
         title: "Property Development",
@@ -33,7 +35,8 @@ const clusters = [
   },
   {
     category: "Sales & Investment",
-    description: "From curated investment opportunities to full portfolio management — we connect capital with the right assets and grow them over time.",
+    description:
+      "From curated investment opportunities to full portfolio management — we connect capital with the right assets and grow them over time.",
     services: [
       {
         title: "Investment Opportunities",
@@ -51,7 +54,8 @@ const clusters = [
   },
   {
     category: "Advisory",
-    description: "Informed decisions start with the right intelligence. We bring rigorous research and expert guidance to every stage of the property journey.",
+    description:
+      "Informed decisions start with the right intelligence. We bring rigorous research and expert guidance to every stage of the property journey.",
     services: [
       {
         title: "Market Analysis & Due Diligence",
@@ -91,7 +95,6 @@ export default function Services() {
       />
 
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-
         {/* Section header */}
         <div
           style={{
@@ -112,7 +115,9 @@ export default function Services() {
                 marginBottom: "2rem",
               }}
             >
-              <div style={{ width: "32px", height: "1px", background: "#C9A96E" }} />
+              <div
+                style={{ width: "32px", height: "1px", background: "#C9A96E" }}
+              />
               <span
                 style={{
                   fontFamily: "'Inter', sans-serif",
@@ -187,6 +192,7 @@ export default function Services() {
             <button
               key={cluster.category}
               onClick={() => setActiveCluster(i)}
+              className={activeCluster === i ? "active-tab" : ""}
               style={{
                 fontFamily: "'Inter', sans-serif",
                 fontSize: "0.72rem",
@@ -194,7 +200,10 @@ export default function Services() {
                 color: activeCluster === i ? "#C9A96E" : "#7A7060",
                 background: "none",
                 border: "none",
-                borderBottom: activeCluster === i ? "1px solid #C9A96E" : "1px solid transparent",
+                borderBottom:
+                  activeCluster === i
+                    ? "1px solid #C9A96E"
+                    : "1px solid transparent",
                 cursor: "pointer",
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
@@ -202,6 +211,7 @@ export default function Services() {
                 marginBottom: "-1px",
                 transition: "color 0.2s ease",
                 whiteSpace: "nowrap",
+                overflow: "hidden",
               }}
               onMouseEnter={(e) => {
                 if (activeCluster !== i) e.target.style.color = "#E8E2D9";
@@ -239,7 +249,7 @@ export default function Services() {
                 opacity: 0.85,
               }}
             >
-              "{clusters[activeCluster].description}"
+              &quot;{clusters[activeCluster].description}&quot;
             </p>
 
             {/* Cluster indicator dots */}
@@ -251,7 +261,10 @@ export default function Services() {
                   style={{
                     width: activeCluster === i ? "24px" : "6px",
                     height: "6px",
-                    background: activeCluster === i ? "#C9A96E" : "rgba(201,169,110,0.25)",
+                    background:
+                      activeCluster === i
+                        ? "#C9A96E"
+                        : "rgba(201,169,110,0.25)",
                     cursor: "pointer",
                     transition: "width 0.3s ease, background 0.3s ease",
                   }}
@@ -268,7 +281,8 @@ export default function Services() {
                 style={{
                   padding: "2rem 0",
                   borderBottom: "1px solid rgba(201,169,110,0.12)",
-                  borderTop: i === 0 ? "1px solid rgba(201,169,110,0.12)" : "none",
+                  borderTop:
+                    i === 0 ? "1px solid rgba(201,169,110,0.12)" : "none",
                 }}
               >
                 <div
@@ -345,14 +359,16 @@ export default function Services() {
               lineHeight: 1.8,
             }}
           >
-            Not sure which service fits your situation? Let's talk — we'll point
-            you in the right direction.
+            Not sure which service fits your situation? Let&apos;s talk;
+            we&apos;ll point you in the right direction.
           </p>
           <a
             href="#contact"
             onClick={(e) => {
               e.preventDefault();
-              document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+              document
+                .querySelector("#contact")
+                ?.scrollIntoView({ behavior: "smooth" });
             }}
             style={{
               fontFamily: "'Inter', sans-serif",
@@ -386,11 +402,24 @@ export default function Services() {
             gap: 2.5rem !important;
           }
           .cluster-tabs {
+            flex-direction: column !important;
+            border-bottom: none !important;
             gap: 0 !important;
+            overflow-x: visible !important;
           }
           .cluster-tabs button {
-            padding: 1rem 1.25rem 1rem 0 !important;
-            font-size: 0.65rem !important;
+            padding: 1rem 1.25rem !important;
+            font-size: 0.72rem !important;
+            border-bottom: 1px solid rgba(201,169,110,0.15) !important;
+            border-left: 2px solid transparent !important;
+            margin-bottom: 0 !important;
+            text-align: left !important;
+            width: 100% !important;
+          }
+          .cluster-tabs button.active-tab {
+            border-left-color: #C9A96E !important;
+            border-bottom-color: rgba(201,169,110,0.15) !important;
+            background: rgba(201,169,110,0.05) !important;
           }
         }
       `}</style>

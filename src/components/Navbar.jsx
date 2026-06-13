@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import { useEffect, useState } from "react";
 
@@ -53,7 +54,10 @@ export default function Navbar() {
         {/* Wordmark */}
         <a
           href="#"
-          onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
           style={{
             textDecoration: "none",
             display: "flex",
@@ -61,30 +65,12 @@ export default function Navbar() {
             lineHeight: 1,
           }}
         >
-          <span
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: "1.35rem",
-              fontWeight: 600,
-              color: "#C9A96E",
-              letterSpacing: "0.04em",
-            }}
-          >
-            Shore Residence
-          </span>
-          <span
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: "0.6rem",
-              fontWeight: 400,
-              color: "#7A7060",
-              letterSpacing: "0.18em",
-              textTransform: "uppercase",
-              marginTop: "2px",
-            }}
-          >
-            Limited
-          </span>
+          <Image
+            src="/logo.png"
+            alt="Shore Residence"
+            width={120}
+            height={30}
+          />
         </a>
 
         {/* Desktop Nav */}
@@ -171,14 +157,13 @@ export default function Navbar() {
                 height: "1.5px",
                 background: "#C9A96E",
                 transition: "transform 0.3s ease, opacity 0.3s ease",
-                transform:
-                  menuOpen
-                    ? i === 0
-                      ? "translateY(6.5px) rotate(45deg)"
-                      : i === 2
+                transform: menuOpen
+                  ? i === 0
+                    ? "translateY(6.5px) rotate(45deg)"
+                    : i === 2
                       ? "translateY(-6.5px) rotate(-45deg)"
                       : "scaleX(0)"
-                    : "none",
+                  : "none",
                 opacity: menuOpen && i === 1 ? 0 : 1,
               }}
             />
@@ -197,7 +182,14 @@ export default function Navbar() {
         }}
         className="mobile-menu"
       >
-        <div style={{ padding: "1.5rem 2rem", display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+        <div
+          style={{
+            padding: "1.5rem 2rem",
+            display: "flex",
+            flexDirection: "column",
+            gap: "1.25rem",
+          }}
+        >
           {navLinks.map((link) => (
             <a
               key={link.href}

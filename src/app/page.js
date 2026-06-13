@@ -1,9 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import About from "@/components/About"
-import Services from "@/components/Services"
-import Projects from "@/components/Projects"
-import Contact from "@/components/Contact"
+import About from "@/components/About";
+import Services from "@/components/Services";
+import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Shore Residence Limited | Strategic Real Estate & Investment",
@@ -20,12 +21,7 @@ export default function Home() {
       <Services />
       <Projects />
       <Contact />
-
-      {/* Placeholder sections — to be built next */}
-      {/* <section id="about" style={{ minHeight: "100vh", background: "#141414" }} />
-      <section id="services" style={{ minHeight: "100vh", background: "#0D0D0D" }} />
-      <section id="projects" style={{ minHeight: "100vh", background: "#141414" }} />
-      <section id="contact" style={{ minHeight: "100vh", background: "#0D0D0D" }} /> */}
+      <Footer />
     </main>
   );
 }

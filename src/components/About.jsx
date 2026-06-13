@@ -10,15 +10,15 @@ const stats = [
 const pillars = [
   {
     title: "Acquisition",
-    text: "We identify undervalued assets before the market catches up — sourcing residential and commercial properties in locations with strong growth fundamentals.",
+    text: "We identify undervalued assets before the market catches up, sourcing residential and commercial properties in locations with strong growth fundamentals.",
   },
   {
     title: "Development",
-    text: "From ground-up builds to strategic refurbishments, we enhance every asset we touch — increasing value, improving liveability, and strengthening returns.",
+    text: "From ground-up builds to strategic refurbishments, we enhance every asset we touch; increasing value, improving liveability, and strengthening returns.",
   },
   {
     title: "Management",
-    text: "We manage real estate portfolios with long-term discipline — protecting capital, maximising yield, and growing investor wealth over time.",
+    text: "We manage real estate portfolios with long-term discipline; protecting capital, maximising yield, and growing investor wealth over time.",
   },
 ];
 
@@ -46,7 +46,6 @@ export default function About() {
       />
 
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-
         {/* Top grid: eyebrow + headline left, intro text right */}
         <div
           style={{
@@ -68,7 +67,9 @@ export default function About() {
                 marginBottom: "2rem",
               }}
             >
-              <div style={{ width: "32px", height: "1px", background: "#C9A96E" }} />
+              <div
+                style={{ width: "32px", height: "1px", background: "#C9A96E" }}
+              />
               <span
                 style={{
                   fontFamily: "'Inter', sans-serif",
@@ -147,7 +148,7 @@ export default function About() {
             >
               Shore Residence Limited is a full-service real estate firm focused
               on acquiring, developing, and managing premium properties across
-              the United Kingdom's most strategic locations.
+              the United Kingdom&apos;s most strategic locations.
             </p>
             <p
               style={{
@@ -160,7 +161,7 @@ export default function About() {
               }}
             >
               We work with a select group of investors, homeowners, and
-              developers who want more than a transaction — they want a partner
+              developers who want more than a transaction; they want a partner
               who understands the market, moves with precision, and delivers
               results that compound over time.
             </p>
@@ -226,7 +227,9 @@ export default function About() {
               marginBottom: "3rem",
             }}
           >
-            <div style={{ width: "32px", height: "1px", background: "#C9A96E" }} />
+            <div
+              style={{ width: "32px", height: "1px", background: "#C9A96E" }}
+            />
             <span
               style={{
                 fontFamily: "'Inter', sans-serif",
@@ -255,7 +258,10 @@ export default function About() {
                 key={pillar.title}
                 style={{
                   padding: "3rem 2.5rem 3rem 0",
-                  borderRight: i < pillars.length - 1 ? "1px solid rgba(201,169,110,0.15)" : "none",
+                  borderRight:
+                    i < pillars.length - 1
+                      ? "1px solid rgba(201,169,110,0.15)"
+                      : "none",
                   paddingLeft: i === 0 ? "0" : "2.5rem",
                 }}
               >
